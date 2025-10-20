@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from 'scrollinfinite';
+import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@scrollinfinite/core';
 
 export interface UseInfiniteScrollOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**

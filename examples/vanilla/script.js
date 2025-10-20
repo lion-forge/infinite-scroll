@@ -1,4 +1,4 @@
-import { ScrollInfinite } from '../../packages/core/dist/index.mjs';
+import { ScrollInfinite } from '@scrollinfinite/core';
 
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');

@@ -1,5 +1,5 @@
 {
-  "name": "scrollinfinite",
+  "name": "@scrollinfinite/core",
   "version": "1.0.0",
   "description": "Universal infinite scroll library for all modern frameworks",
   "keywords": [

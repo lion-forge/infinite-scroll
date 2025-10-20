@@ -1,5 +1,5 @@
 import { ref, onMounted, onUnmounted, Ref, watch } from 'vue';
-import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from 'scrollinfinite';
+import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@scrollinfinite/core';
 
 export interface UseInfiniteScrollOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**

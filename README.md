@@ -2,7 +2,7 @@
 
 > Universal infinite scroll library for all modern frameworks
 
-[![npm version](https://img.shields.io/npm/v/scrollinfinite.svg)](https://www.npmjs.com/package/scrollinfinite)
+[![npm version](https://img.shields.io/npm/v/@scrollinfinite/core.svg)](https://www.npmjs.com/package/@scrollinfinite/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ScrollInfinite is a lightweight, framework-agnostic infinite scroll library with first-class support for React, Vue, Angular, and Svelte. It provides a simple, performant solution for implementing infinite scrolling with both Intersection Observer API and traditional scroll events.
@@ -21,7 +21,7 @@ ScrollInfinite is a lightweight, framework-agnostic infinite scroll library with
 ### Core Library (Vanilla JS/TypeScript)
 
 ```bash
-npm install scrollinfinite
+npm install @scrollinfinite/core
 ```
 
 ### Framework-Specific Packages
@@ -162,7 +162,7 @@ export class MyComponent {
 ### Vanilla JavaScript
 
 ```javascript
-import { ScrollInfinite } from 'scrollinfinite';
+import { ScrollInfinite } from '@scrollinfinite/core';
 
 const container = document.getElementById('container');
 
@@ -241,5 +241,13 @@ MIT © Umut Korkmaz
 ## Links
 
 - [GitHub Repository](https://github.com/UmutKorkmaz/js-infinity-scroll)
-- [npm Package](https://www.npmjs.com/package/scrollinfinite)
+- [npm Organization](https://www.npmjs.com/org/scrollinfinite)
 - [Issues](https://github.com/UmutKorkmaz/js-infinity-scroll/issues)
+
+## npm Packages
+
+- [@scrollinfinite/core](https://www.npmjs.com/package/@scrollinfinite/core) - Core library
+- [@scrollinfinite/react](https://www.npmjs.com/package/@scrollinfinite/react) - React hooks
+- [@scrollinfinite/vue](https://www.npmjs.com/package/@scrollinfinite/vue) - Vue composables
+- [@scrollinfinite/angular](https://www.npmjs.com/package/@scrollinfinite/angular) - Angular directives
+- [@scrollinfinite/svelte](https://www.npmjs.com/package/@scrollinfinite/svelte) - Svelte actions & stores
