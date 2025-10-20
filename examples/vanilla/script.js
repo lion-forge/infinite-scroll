@@ -1,4 +1,4 @@
-import { ScrollInfinite } from '@scrollinfinite/core';
+import { ScrollInfinite } from '@lionforge/scroll-infinite';
 
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');

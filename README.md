@@ -1,253 +1,135 @@
-# ScrollInfinite
+# 🦁⚒️ LionForge
 
-> Universal infinite scroll library for all modern frameworks
+> Forge powerful applications with confidence
 
-[![npm version](https://img.shields.io/npm/v/@scrollinfinite/core.svg)](https://www.npmjs.com/package/@scrollinfinite/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-ScrollInfinite is a lightweight, framework-agnostic infinite scroll library with first-class support for React, Vue, Angular, and Svelte. It provides a simple, performant solution for implementing infinite scrolling with both Intersection Observer API and traditional scroll events.
+**LionForge** is a collection of powerful, framework-agnostic libraries for building modern web applications. Crafted with strength and precision, each tool in the LionForge ecosystem is designed to work seamlessly across React, Vue, Angular, Svelte, and vanilla JavaScript.
 
-## Features
+---
 
-- **Universal**: Works with React, Vue, Angular, Svelte, and vanilla JavaScript
-- **TypeScript**: Fully typed with comprehensive type definitions
-- **Performant**: Uses Intersection Observer API by default with fallback to scroll events
-- **Flexible**: Highly configurable with sensible defaults
-- **Lightweight**: Minimal bundle size with tree-shaking support
-- **Modern**: Built with modern JavaScript and bundled for ESM and CJS
+## 🌟 Philosophy
 
-## Installation
+LionForge tools embody three core principles:
 
-### Core Library (Vanilla JS/TypeScript)
+1. **🦁 Strength** - Robust, battle-tested solutions for real-world challenges
+2. **⚒️ Craftsmanship** - Meticulously designed APIs and developer experience
+3. **🌍 Universal** - Framework-agnostic core with first-class framework adapters
+
+---
+
+## 📦 Current Libraries
+
+### Infinite Scroll
+
+Universal infinite scroll library with support for all modern frameworks.
 
 ```bash
-npm install @scrollinfinite/core
+# Core library (vanilla JS/TypeScript)
+npm install @lionforge/scroll-infinite
+
+# Framework-specific packages
+npm install @lionforge/react-scroll-infinite
+npm install @lionforge/vue-scroll-infinite
+npm install @lionforge/angular-scroll-infinite
+npm install @lionforge/svelte-scroll-infinite
 ```
 
-### Framework-Specific Packages
+**Features:**
+- ✅ Intersection Observer API with scroll event fallback
+- ✅ Configurable thresholds and directions
+- ✅ Loading state management
+- ✅ TypeScript support with full type definitions
+- ✅ Tree-shakeable builds (ESM & CJS)
 
-```bash
-# React
-npm install @scrollinfinite/react
-
-# Vue 3
-npm install @scrollinfinite/vue
-
-# Angular
-npm install @scrollinfinite/angular
-
-# Svelte
-npm install @scrollinfinite/svelte
-```
-
-## Quick Start
-
-### React
+**Quick Start:**
 
 ```tsx
-import { useInfiniteScroll } from '@scrollinfinite/react';
+// React
+import { useInfiniteScroll } from '@lionforge/react-scroll-infinite';
 
 function MyComponent() {
-  const [items, setItems] = useState([]);
-
   const { containerRef, isLoading } = useInfiniteScroll({
     onLoadMore: async () => {
-      const newItems = await fetchMoreItems();
-      setItems([...items, ...newItems]);
+      await fetchMoreItems();
     },
-    threshold: 200,
   });
 
-  return (
-    <div ref={containerRef}>
-      {items.map(item => (
-        <div key={item.id}>{item.name}</div>
-      ))}
-      {isLoading && <div>Loading...</div>}
-    </div>
-  );
+  return <div ref={containerRef}>...</div>;
 }
 ```
 
-### Vue 3
+---
 
-```vue
-<template>
-  <div ref="containerRef">
-    <div v-for="item in items" :key="item.id">
-      {{ item.name }}
-    </div>
-    <div v-if="isLoading">Loading...</div>
-  </div>
-</template>
+## 🚀 Coming Soon
 
-<script setup>
-import { ref } from 'vue';
-import { useInfiniteScroll } from '@scrollinfinite/vue';
+The LionForge ecosystem is growing! Here's what's being forged:
 
-const items = ref([]);
+- **🗂️ Table** - Powerful data tables and grids
+- **🪝 Hooks** - Collection of useful React hooks
+- **🎨 Vue Hooks** - Vue 3 composables collection
+- **📱 Virtual** - Virtual scrolling for large lists
+- **📝 Forms** - Form utilities and validation
+- **⚡ State** - State management utilities
+- **🎯 Core** - Shared utilities across all packages
 
-const { containerRef, isLoading } = useInfiniteScroll({
-  onLoadMore: async () => {
-    const newItems = await fetchMoreItems();
-    items.value = [...items.value, ...newItems];
-  },
-  threshold: 200,
-});
-</script>
-```
+---
 
-### Svelte
+## 🎯 Why LionForge?
 
-```svelte
-<script>
-  import { infiniteScroll } from '@scrollinfinite/svelte';
+### Universal by Design
+Every LionForge library starts with a framework-agnostic core, then adds thin, idiomatic wrappers for each framework. Use the same powerful tool regardless of your stack.
 
-  let items = [];
-  let loading = false;
+### TypeScript First
+Built with TypeScript from the ground up, providing excellent intellisense and type safety.
 
-  async function loadMore() {
-    loading = true;
-    const newItems = await fetchMoreItems();
-    items = [...items, ...newItems];
-    loading = false;
-  }
-</script>
+### Developer Experience
+Clean, intuitive APIs that feel natural in each framework while maintaining consistency across the ecosystem.
 
-<div use:infiniteScroll={{ onLoadMore: loadMore, threshold: 200 }}>
-  {#each items as item (item.id)}
-    <div>{item.name}</div>
-  {/each}
-  {#if loading}
-    <div>Loading...</div>
-  {/if}
-</div>
-```
+### Battle-Tested
+Production-ready tools that solve real problems, not just experiments.
 
-### Angular
+---
 
-```typescript
-import { Component } from '@angular/core';
-import { InfiniteScrollDirective } from '@scrollinfinite/angular';
+## 📖 Documentation
 
-@Component({
-  selector: 'app-my-component',
-  standalone: true,
-  imports: [InfiniteScrollDirective],
-  template: `
-    <div
-      infiniteScroll
-      [threshold]="200"
-      (loadMore)="onLoadMore()">
-      <div *ngFor="let item of items">
-        {{ item.name }}
-      </div>
-      <div *ngIf="loading">Loading...</div>
-    </div>
-  `,
-})
-export class MyComponent {
-  items = [];
-  loading = false;
+- [Infinite Scroll](./packages/core/README.md) - Documentation for infinite scroll library
+- Framework guides available in each package directory
 
-  async onLoadMore() {
-    this.loading = true;
-    const newItems = await this.fetchMoreItems();
-    this.items = [...this.items, ...newItems];
-    this.loading = false;
-  }
-}
-```
+---
 
-### Vanilla JavaScript
+## 🤝 Contributing
 
-```javascript
-import { ScrollInfinite } from '@scrollinfinite/core';
+LionForge is an open ecosystem! Contributions are welcome.
 
-const container = document.getElementById('container');
+---
 
-const scrollInfinite = new ScrollInfinite(
-  {
-    container: container,
-    threshold: 200,
-  },
-  {
-    onLoadMore: async () => {
-      const items = await fetchMoreItems();
-      renderItems(items);
-    },
-    onStateChange: (state) => {
-      console.log('State changed:', state);
-    },
-  }
-);
+## 📄 License
 
-scrollInfinite.observe();
-```
+All LionForge packages are MIT licensed.
 
-## Configuration Options
+---
 
-All framework adapters support the following configuration options:
+## 🔗 Links
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `threshold` | `number` | `200` | Distance from bottom (in pixels) when to trigger loading |
-| `direction` | `'vertical' \| 'horizontal'` | `'vertical'` | Scroll direction to observe |
-| `useIntersectionObserver` | `boolean` | `true` | Use Intersection Observer API instead of scroll events |
-| `rootMargin` | `string` | `'200px'` | Root margin for Intersection Observer |
-| `enabled` | `boolean` | `true` | Enable/disable infinite scroll |
-| `debounceDelay` | `number` | `100` | Debounce delay for scroll events (ms) |
-
-## API
-
-### Loading States
-
-The library provides the following loading states:
-
-- `idle`: Initial state, ready to load
-- `loading`: Currently loading more items
-- `loaded`: Successfully loaded items
-- `error`: Error occurred while loading
-
-### Methods
-
-All framework adapters provide these methods:
-
-- `reset()`: Reset to initial state
-- `enable()`: Enable infinite scroll
-- `disable()`: Disable infinite scroll
-
-## Examples
-
-Check out the `/examples` directory for complete working examples with each framework.
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-Intersection Observer API is supported in all modern browsers. For older browsers, the library falls back to scroll events.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-MIT © Umut Korkmaz
-
-## Links
-
-- [GitHub Repository](https://github.com/UmutKorkmaz/js-infinity-scroll)
-- [npm Organization](https://www.npmjs.com/org/scrollinfinite)
+- [GitHub Organization](https://github.com/UmutKorkmaz/js-infinity-scroll)
+- [npm Organization](https://www.npmjs.com/org/lionforge)
 - [Issues](https://github.com/UmutKorkmaz/js-infinity-scroll/issues)
 
-## npm Packages
+---
 
-- [@scrollinfinite/core](https://www.npmjs.com/package/@scrollinfinite/core) - Core library
-- [@scrollinfinite/react](https://www.npmjs.com/package/@scrollinfinite/react) - React hooks
-- [@scrollinfinite/vue](https://www.npmjs.com/package/@scrollinfinite/vue) - Vue composables
-- [@scrollinfinite/angular](https://www.npmjs.com/package/@scrollinfinite/angular) - Angular directives
-- [@scrollinfinite/svelte](https://www.npmjs.com/package/@scrollinfinite/svelte) - Svelte actions & stores
+## 📦 All Packages
+
+- [@lionforge/scroll-infinite](https://www.npmjs.com/package/@lionforge/scroll-infinite) - Core infinite scroll library
+- [@lionforge/react-scroll-infinite](https://www.npmjs.com/package/@lionforge/react-scroll-infinite) - React hooks for infinite scroll
+- [@lionforge/vue-scroll-infinite](https://www.npmjs.com/package/@lionforge/vue-scroll-infinite) - Vue composables for infinite scroll
+- [@lionforge/angular-scroll-infinite](https://www.npmjs.com/package/@lionforge/angular-scroll-infinite) - Angular directives for infinite scroll
+- [@lionforge/svelte-scroll-infinite](https://www.npmjs.com/package/@lionforge/svelte-scroll-infinite) - Svelte actions for infinite scroll
+
+---
+
+<div align="center">
+
+**Forged with 🦁 and ⚒️ by [Umut Korkmaz](https://github.com/UmutKorkmaz)**
+
+</div>

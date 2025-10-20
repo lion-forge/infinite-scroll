@@ -1,7 +1,7 @@
 {
-  "name": "@scrollinfinite/angular",
+  "name": "@lionforge/angular-scroll-infinite",
   "version": "1.0.0",
-  "description": "Angular directives for ScrollInfinite - Universal infinite scroll library",
+  "description": "Angular directives for infinite scroll - Part of LionForge ecosystem",
   "keywords": [
     "angular",
     "directive",
@@ -40,7 +40,7 @@
     "@angular/core": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
   "dependencies": {
-    "@scrollinfinite/core": "workspace:*"
+    "@lionforge/scroll-infinite": "workspace:*"
   },
   "devDependencies": {
     "@angular/core": "^17.0.0",
