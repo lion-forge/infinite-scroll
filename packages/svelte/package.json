@@ -1,0 +1,52 @@
+{
+  "name": "@scrollinfinite/svelte",
+  "version": "1.0.0",
+  "description": "Svelte actions for ScrollInfinite - Universal infinite scroll library",
+  "keywords": [
+    "svelte",
+    "actions",
+    "infinite-scroll",
+    "scroll",
+    "infinite",
+    "lazy-load",
+    "pagination"
+  ],
+  "author": "Umut Korkmaz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UmutKorkmaz/js-infinity-scroll.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "svelte": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "svelte": "^3.0.0 || ^4.0.0"
+  },
+  "dependencies": {
+    "scrollinfinite": "workspace:*"
+  },
+  "devDependencies": {
+    "svelte": "^4.2.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.0"
+  }
+}
