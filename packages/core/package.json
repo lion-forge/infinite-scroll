@@ -1,0 +1,45 @@
+{
+  "name": "scrollinfinite",
+  "version": "1.0.0",
+  "description": "Universal infinite scroll library for all modern frameworks",
+  "keywords": [
+    "infinite-scroll",
+    "scroll",
+    "infinite",
+    "lazy-load",
+    "pagination",
+    "react",
+    "vue",
+    "angular",
+    "svelte"
+  ],
+  "author": "Umut Korkmaz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UmutKorkmaz/js-infinity-scroll.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.0"
+  }
+}
