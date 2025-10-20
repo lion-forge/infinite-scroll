@@ -14,4 +14,4 @@ export type {
   ScrollInfiniteConfig,
   ScrollDirection,
   LoadingState,
-} from '@scrollinfinite/core';
+} from '@lionforge/scroll-infinite';

@@ -1,19 +1,19 @@
-# @scrollinfinite/core
+# @lionforge/scroll-infinite
 
-> Framework-agnostic infinite scroll library
+> Universal infinite scroll library - Part of the LionForge ecosystem
 
-The core library that powers ScrollInfinite. Use this directly for vanilla JavaScript/TypeScript projects, or use one of the framework-specific packages for React, Vue, Angular, or Svelte.
+Framework-agnostic infinite scroll implementation. Use this directly for vanilla JavaScript/TypeScript projects, or use one of the framework-specific packages for React, Vue, Angular, or Svelte.
 
 ## Installation
 
 ```bash
-npm install @scrollinfinite/core
+npm install @lionforge/scroll-infinite
 ```
 
 ## Usage
 
 ```javascript
-import { ScrollInfinite } from '@scrollinfinite/core';
+import { ScrollInfinite } from '@lionforge/scroll-infinite';
 
 const container = document.getElementById('container');
 
@@ -89,6 +89,19 @@ interface ScrollInfiniteCallbacks {
 - `enable()`: Enable infinite scroll
 - `disable()`: Disable infinite scroll
 - `destroy()`: Clean up and destroy instance
+
+## Framework Packages
+
+For better integration with your framework, use these packages:
+
+- **React**: `@lionforge/react-scroll-infinite`
+- **Vue**: `@lionforge/vue-scroll-infinite`
+- **Angular**: `@lionforge/angular-scroll-infinite`
+- **Svelte**: `@lionforge/svelte-scroll-infinite`
+
+## Part of LionForge
+
+This library is part of the [LionForge](https://github.com/UmutKorkmaz/js-infinity-scroll) ecosystem - a collection of powerful, framework-agnostic libraries for modern web development.
 
 ## License
 

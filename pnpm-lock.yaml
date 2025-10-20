@@ -35,7 +35,7 @@ importers:
 
   packages/angular:
     dependencies:
-      '@scrollinfinite/core':
+      '@lionforge/scroll-infinite':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -66,7 +66,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@scrollinfinite/core':
+      '@lionforge/scroll-infinite':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -85,7 +85,7 @@ importers:
 
   packages/svelte:
     dependencies:
-      '@scrollinfinite/core':
+      '@lionforge/scroll-infinite':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -101,7 +101,7 @@ importers:
 
   packages/vue:
     dependencies:
-      '@scrollinfinite/core':
+      '@lionforge/scroll-infinite':
         specifier: workspace:*
         version: link:../core
     devDependencies:

@@ -1,5 +1,5 @@
 import { writable, derived, Readable } from 'svelte/store';
-import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@scrollinfinite/core';
+import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@lionforge/scroll-infinite';
 
 export interface InfiniteScrollStoreOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**

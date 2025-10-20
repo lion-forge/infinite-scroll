@@ -1,7 +1,7 @@
 {
-  "name": "@scrollinfinite/vue",
+  "name": "@lionforge/vue-scroll-infinite",
   "version": "1.0.0",
-  "description": "Vue composables for ScrollInfinite - Universal infinite scroll library",
+  "description": "Vue composables for infinite scroll - Part of LionForge ecosystem",
   "keywords": [
     "vue",
     "composables",
@@ -41,7 +41,7 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@scrollinfinite/core": "workspace:*"
+    "@lionforge/scroll-infinite": "workspace:*"
   },
   "devDependencies": {
     "vue": "^3.3.0",

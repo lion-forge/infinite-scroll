@@ -1,7 +1,7 @@
 {
-  "name": "@scrollinfinite/core",
+  "name": "@lionforge/scroll-infinite",
   "version": "1.0.0",
-  "description": "Universal infinite scroll library for all modern frameworks",
+  "description": "Universal infinite scroll library for all modern frameworks - Part of LionForge ecosystem",
   "keywords": [
     "infinite-scroll",
     "scroll",

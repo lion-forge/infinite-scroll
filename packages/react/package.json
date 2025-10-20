@@ -1,7 +1,7 @@
 {
-  "name": "@scrollinfinite/react",
+  "name": "@lionforge/react-scroll-infinite",
   "version": "1.0.0",
-  "description": "React hooks for ScrollInfinite - Universal infinite scroll library",
+  "description": "React hooks for infinite scroll - Part of LionForge ecosystem",
   "keywords": [
     "react",
     "hooks",
@@ -40,7 +40,7 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@scrollinfinite/core": "workspace:*"
+    "@lionforge/scroll-infinite": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",

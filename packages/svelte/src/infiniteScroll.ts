@@ -1,4 +1,4 @@
-import { ScrollInfinite, ScrollInfiniteConfig } from '@scrollinfinite/core';
+import { ScrollInfinite, ScrollInfiniteConfig } from '@lionforge/scroll-infinite';
 
 export interface InfiniteScrollActionOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**
