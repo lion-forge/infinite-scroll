@@ -40,7 +40,7 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "scrollinfinite": "workspace:*"
+    "@scrollinfinite/core": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",

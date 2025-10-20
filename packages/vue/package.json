@@ -41,7 +41,7 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "scrollinfinite": "workspace:*"
+    "@scrollinfinite/core": "workspace:*"
   },
   "devDependencies": {
     "vue": "^3.3.0",

@@ -1,4 +1,4 @@
-import { ScrollInfinite, ScrollInfiniteConfig } from 'scrollinfinite';
+import { ScrollInfinite, ScrollInfiniteConfig } from '@scrollinfinite/core';
 
 export interface InfiniteScrollActionOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**

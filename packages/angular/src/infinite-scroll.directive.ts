@@ -7,7 +7,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from 'scrollinfinite';
+import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@scrollinfinite/core';
 
 /**
  * Angular directive for infinite scroll

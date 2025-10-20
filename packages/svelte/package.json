@@ -42,7 +42,7 @@
     "svelte": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
-    "scrollinfinite": "workspace:*"
+    "@scrollinfinite/core": "workspace:*"
   },
   "devDependencies": {
     "svelte": "^4.2.0",

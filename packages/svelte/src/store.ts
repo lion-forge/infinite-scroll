@@ -1,5 +1,5 @@
 import { writable, derived, Readable } from 'svelte/store';
-import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from 'scrollinfinite';
+import { ScrollInfinite, ScrollInfiniteConfig, LoadingState } from '@scrollinfinite/core';
 
 export interface InfiniteScrollStoreOptions extends Omit<ScrollInfiniteConfig, 'container'> {
   /**

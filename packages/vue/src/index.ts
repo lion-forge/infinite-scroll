@@ -11,4 +11,4 @@ export type {
   ScrollInfiniteConfig,
   ScrollDirection,
   LoadingState,
-} from 'scrollinfinite';
+} from '@scrollinfinite/core';

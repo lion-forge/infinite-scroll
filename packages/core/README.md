@@ -1,4 +1,4 @@
-# scrollinfinite
+# @scrollinfinite/core
 
 > Framework-agnostic infinite scroll library
 
@@ -7,13 +7,13 @@ The core library that powers ScrollInfinite. Use this directly for vanilla JavaS
 ## Installation
 
 ```bash
-npm install scrollinfinite
+npm install @scrollinfinite/core
 ```
 
 ## Usage
 
 ```javascript
-import { ScrollInfinite } from 'scrollinfinite';
+import { ScrollInfinite } from '@scrollinfinite/core';
 
 const container = document.getElementById('container');
 
