@@ -1,0 +1,21 @@
+<h1>LionForge ScrollInfinite - Angular Example</h1>
+<p class="description">Scroll down to load more images from Unsplash</p>
+
+<div *ngIf="loading" class="loader">
+  <img src="/infinity-loader.svg" alt="Loading" />
+</div>
+
+<div #container class="image-container">
+  <a
+    *ngFor="let photo of photos"
+    [href]="photo.links.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      [src]="photo.urls.regular"
+      [alt]="photo.alt_description || 'Unsplash photo'"
+      [title]="photo.alt_description || 'Unsplash photo'"
+    />
+  </a>
+</div>
